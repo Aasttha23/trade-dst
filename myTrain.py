@@ -35,10 +35,10 @@ model = globals()[args['decoder']](
 # print("[Info] Slots include ", SLOTS_LIST)
 # print("[Info] Unpointable Slots include ", gating_dict)
 
-for epoch in range(200):
+for epoch in range(50):
     print("Epoch:{}".format(epoch))  
     # Run the train function
-    pbar = tqdm(enumerate(train),total=len(train))
+    pbar = tqdm(enumerate(train),total=len(train)/2)
     for i, data in pbar:
         model.train_batch(data, int(args['clip']), SLOTS_LIST[1], reset=(i==0))
         model.optimize(args['clip'])
