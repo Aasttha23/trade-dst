@@ -22,7 +22,7 @@ from random import shuffle
 
 from .fix_label import *
 
-EXPERIMENT_DOMAINS = ["hotel", "train", "restaurant", "attraction", "taxi"]
+EXPERIMENT_DOMAINS = ["train", "taxi"]
 
 class Lang:
     def __init__(self):
