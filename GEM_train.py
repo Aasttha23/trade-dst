@@ -123,7 +123,7 @@ if USE_CUDA: grads = grads.cuda()
 avg_best, cnt, acc = 0.0, 0, 0.0
 weights_best = deepcopy(model.state_dict())
 try:
-    for epoch in range(100):
+    for epoch in range(50):
         print("Epoch:{}".format(epoch))  
         # Run the train function
         pbar = tqdm(enumerate(train_single),total=len(train_single))
